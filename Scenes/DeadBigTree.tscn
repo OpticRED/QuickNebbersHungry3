@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AssetImports/DeadBigTree.dae" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 1.31666
+height = 4.21507
+
+[node name="DeadBigTree" instance=ExtResource( 1 )]
+
+[node name="DeadOak3" parent="." index="0"]
+transform = Transform( 3.12714, 0.0389168, -0.0247638, -0.0387604, 3.12717, 0.0198083, 0.0250078, -0.0194993, 3.12732, -4.11975, 6.59026, -0.812725 )
+
+[node name="StaticBody" type="StaticBody" parent="." index="2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88358, 0 )
+shape = SubResource( 1 )

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://nebberfromblender.glb" type="PackedScene" id=1]
+[ext_resource path="res://Nebber1Godot.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 0.002
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="nebberfromblender" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.161821, -0.211763, 1.14192 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.679, 0 )
+
+[node name="Camera" type="Camera" parent="Head"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.408527, 0 )
+fov = 81.0
+far = 1500.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0.391449 )
+shape = SubResource( 1 )
