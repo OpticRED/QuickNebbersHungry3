@@ -55,7 +55,8 @@ func _process(delta):
 		
 	direction = direction.normalized()
 	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
-	
+	#velocity.y = fall.y
 	velocity = move_and_slide(velocity, Vector3.UP, true)
+# warning-ignore:return_value_discarded
 	move_and_slide(fall, Vector3.UP, true)
 
