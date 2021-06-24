@@ -3,5 +3,7 @@
 [ext_resource path="res://Crack.otf" type="DynamicFontData" id=1]
 
 [resource]
-size = 65
+size = 100
+outline_size = 3
+outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 1 )

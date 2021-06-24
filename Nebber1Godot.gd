@@ -1,9 +1,9 @@
 extends KinematicBody
 
-var speed = 8
+var speed = 15
 var acceleration = 18
-var gravity = 15
-var jump = 5
+var gravity = 16
+var jump = 6
 
 var mouse_sense = 0.1
 

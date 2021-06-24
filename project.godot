@@ -21,6 +21,15 @@ config/icon="res://icon.png"
 
 PlayerStats="*res://player_stats.gd"
 
+[display]
+
+window/size/width=1980
+window/size/height=1080
+window/size/test_width=960
+window/size/test_height=540
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [input]
 
 move_forward={
@@ -56,5 +65,4 @@ Sprint={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"

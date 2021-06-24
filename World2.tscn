@@ -1,54 +1,112 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://meteor1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://secondasset.tscn" type="PackedScene" id=2]
-[ext_resource path="res://grass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/DeadBigTree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/rock1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/BigTree.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Nebber1Godot.tscn" type="PackedScene" id=4]
 [ext_resource path="res://cracker.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ScoreLayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/PineTree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Terrain2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World2.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/rock_2.tscn" type="PackedScene" id=10]
 
 [node name="World2" type="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201267, 0.213402, -0.206726 )
-__meta__ = {
-"_edit_group_": true
-}
+script = ExtResource( 9 )
+
+[node name="rock_2" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.959609, 0, -0.720521, 0, 1.2, 0, 0.720521, 0, 0.959609, -2.84936, 0.292571, 9.3166 )
+
+[node name="rock_3" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.662813, 0, -1.00034, 0, 1.2, 0, 1.00034, 0, 0.662813, 10.4708, 0.652928, -0.253559 )
+
+[node name="rock_4" parent="." instance=ExtResource( 10 )]
+transform = Transform( -0.459897, 0, -1.10837, 0, 1.2, 0, 1.10837, 0, -0.459897, 11.7495, 0.732917, 36.7144 )
+
+[node name="rock_5" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1.2879, 0, 6.8805, 0, 7, 0, -6.8805, 0, -1.2879, 22.4488, -1.52821, 101.756 )
+
+[node name="rock_6" parent="." instance=ExtResource( 10 )]
+transform = Transform( 3.36885, 0, 6.13603, 0, 7, 0, -6.13603, 0, 3.36885, 79.6225, -2.76951, 99.1002 )
+
+[node name="rock_7" parent="." instance=ExtResource( 10 )]
+transform = Transform( 6.9718, 0, -0.627735, 0, 7, 0, 0.627735, 0, 6.9718, 76.3114, -2.76951, 66.5294 )
+
+[node name="BigTree" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 10, 0.74643, 13 )
+
+[node name="BigTree2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.533564, 0, -0.274426, 0, 0.6, 0, 0.274426, 0, 0.533564, 20.3898, 0.349298, 26 )
+
+[node name="Terrain2" parent="." instance=ExtResource( 8 )]
+
+[node name="PineTree" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.446376, 0, -0.225275, 0, 0.5, 0, 0.225275, 0, 0.446376, 0, 0.0426009, 17.785 )
+
+[node name="PineTree3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.388787, 0, -0.314396, 0, 0.5, 0, 0.314396, 0, 0.388787, 3.93017, -0.0724237, 33.9479 )
+
+[node name="PineTree2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.8488, 0.567475, 3.46652 )
+
+[node name="rock1" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.0198256, 0, -0.999803, 0, 1, 0, 0.999803, 0, -0.0198256, -2.64063, 0.514905, -6.14065 )
+
+[node name="rock2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.757326, 0, -0.653037, 0, 1, 0, 0.653037, 0, -0.757326, 0.380196, 0.668631, 22.2302 )
+
+[node name="rock5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -6.46924, -0.0951406, 4.77821, -0.330017, 8.01925, -0.283088, -4.79284, -0.423757, -6.43, 66.9739, -2.93941, -11.2712 )
+
+[node name="rock6" parent="." instance=ExtResource( 2 )]
+transform = Transform( -6.64029, -0.110583, 4.53973, -0.330017, 8.01925, -0.283088, -4.55292, -0.419992, -6.60053, -42.0869, 1.96551, 48.1083 )
+
+[node name="rock9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 7.53567, 0.407601, 2.80977, -0.330017, 8.01925, -0.283088, -2.8348, 0.149944, 7.50209, 31.0557, 3.89996, -49.1733 )
+
+[node name="rock7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.52783, 0.372706, 7.60226, -0.330017, 8.01925, -0.283088, -7.64412, -0.222963, 2.52621, -26.8995, 3.94294, 83.9069 )
+
+[node name="rock8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.21037, 0.363192, 7.69999, -0.330017, 8.01925, -0.283088, -7.74188, -0.238146, 2.21048, 66.786, -2.23505, 36.3746 )
+
+[node name="rock3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.757326, 0, -0.653037, 0, 1, 0, 0.653037, 0, -0.757326, 19.0177, 0.448814, 8.8151 )
+
+[node name="rock4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.920177, 0, 0.391502, 0, 1, 0, -0.391502, 0, -0.920177, 24.1959, 1.14276, 30.4129 )
+
+[node name="DeadBigTree" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.377199, 0, -0.133121, 0, 0.5, 0, 0.133121, 0, 0.377199, 16.1799, -0.107123, 16.2079 )
+
+[node name="DeadBigTree3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.192365, 0, 0.350707, 0, 0.5, 0, -0.350707, 0, 0.192365, 7.35038, -0.107123, 29.0166 )
+
+[node name="DeadBigTree2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.248388, 0, -0.313534, 0, 0.5, 0, 0.313534, 0, 0.248388, 2.65667, -0.107123, 7.99562 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.1666, 93.7059 )
-
-[node name="secondasset" parent="." instance=ExtResource( 2 )]
-
-[node name="meteor1" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7567, -17.8178 )
-
-[node name="grass11" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.501553, 0 )
 
 [node name="cracker" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.9756, 82.8005 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.815, 1.13539, -7.86633 )
 
 [node name="cracker2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51.7824, 31.7682, -78.3431 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3338, 1.13539, 13.347 )
 
 [node name="cracker3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.2519, 42.1225, 82.8005 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.892996, 1.13539, 19.8419 )
 
 [node name="cracker4" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.3719, 28.9544, 96.0966 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3621, 12.4523, 32.7009 )
 
 [node name="cracker5" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0171, 13.3091, -18.7336 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7945, 1.6386, 32.7009 )
 
 [node name="cracker6" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95664, 29.1003, -8.46058 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1294, 18.8305, 0.530732 )
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.0922601, -0.14617, -0.984948, 0.717989, 0.695128, -0.0359055, 0.689913, -0.703869, 0.169081, -133.3, 67.3375, -9.29921 )
-light_color = Color( 1, 0.631373, 0, 1 )
-light_energy = 2.0
-light_indirect_energy = 16.0
-light_specular = 1.0
-shadow_color = Color( 1, 0.980392, 0, 1 )
-shadow_bias = 4.58
-directional_shadow_max_distance = 2.6
+[node name="cracker7" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1294, 18.8305, 13.3581 )
 
 [node name="Score" parent="." instance=ExtResource( 6 )]
