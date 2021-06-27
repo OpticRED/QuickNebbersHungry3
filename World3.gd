@@ -13,4 +13,4 @@ func _ready():
 
 func _process(delta):
 	if PlayerStats.score >= 18:
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://World4.tscn")
