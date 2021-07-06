@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Crack.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://nebbermainmenupcicc.png" type="Texture" id=3]
+[ext_resource path="res://UV TExturemap.material" type="Material" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 125
@@ -22,9 +24,19 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
+material = ExtResource( 4 )
 margin_right = 1980.0
 margin_bottom = 1080.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.368627, 0.0156863, 0.0156863, 1 )
+
+[node name="CenterContainer2" type="CenterContainer" parent="ColorRect"]
+margin_right = 1980.0
+margin_bottom = 1440.0
+
+[node name="nebbermainmenupcicc" type="Sprite" parent="ColorRect/CenterContainer2"]
+position = Vector2( 987.863, 545.515 )
+scale = Vector2( 2.05551, 2.02661 )
+texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1980.0
@@ -81,6 +93,8 @@ text = "Start"
 [node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/OptionName"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.449
+margin_right = 1.449
 __meta__ = {
 "_edit_use_anchors_": false
 }

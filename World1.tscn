@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://cracker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScoreLayer.tscn" type="PackedScene" id=2]
@@ -7,6 +7,38 @@
 [ext_resource path="res://meteor1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World1.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/BigTree.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/PineTree.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_energy = 0.82
+ambient_light_energy = 0.29
+fog_color = Color( 0, 0, 0, 1 )
+fog_sun_color = Color( 0, 0, 0, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 0.0
+fog_height_enabled = true
+fog_height_min = 25.0
+tonemap_exposure = 0.29
+tonemap_white = 0.29
+auto_exposure_enabled = true
+auto_exposure_scale = 0.1
+auto_exposure_min_luma = 0.0
+auto_exposure_max_luma = 0.36
+auto_exposure_speed = 0.01
+glow_enabled = true
+glow_intensity = 5.33
+glow_strength = 1.75
+glow_hdr_threshold = 1.18
+glow_hdr_luminance_cap = 43.29
+glow_hdr_scale = 2.38
+adjustment_brightness = 0.64
+adjustment_contrast = 1.27
+adjustment_saturation = 0.47
 
 [node name="World1" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.201267, 0.213402, -0.206726 )
@@ -44,13 +76,41 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0171, 13.3091, -18.7336 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8717, 17.6061, -57.0579 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.0922601, -0.14617, -0.984948, 0.717989, 0.695128, -0.0359056, 0.689913, -0.703869, 0.169081, -133.3, 44.7823, -9.29921 )
-light_color = Color( 1, 0.631373, 0, 1 )
-light_energy = 2.17
-light_indirect_energy = 16.0
-light_specular = 1.0
-shadow_color = Color( 1, 0.980392, 0, 1 )
-shadow_bias = 4.58
-directional_shadow_max_distance = 2.6
+transform = Transform( -0.667091, 0.589141, 0.455964, 0.6918, 0.716981, 0.0857327, -0.276409, 0.372627, -0.885859, -0.979977, 126.35, -199.777 )
+light_color = Color( 1, 0.972549, 0.678431, 1 )
+light_energy = 13.2
+light_indirect_energy = 5.51
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 1.73
+shadow_contact = 9.98
+directional_shadow_max_distance = 0.1
 
 [node name="Score" parent="." instance=ExtResource( 2 )]
+
+[node name="BigTree" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.988359, 0, -0.152141, 0, 1, 0, 0.152141, 0, 0.988359, -2.38419e-07, 35.5256, -107.089 )
+
+[node name="BigTree2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.0042935, 0, 0.999991, 0, 1, 0, -0.999991, 0, 0.0042935, -70.5738, 30.9683, -60.2362 )
+
+[node name="BigTree3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.941582, 0, 0.336783, 0, 1, 0, -0.336783, 0, 0.941582, -94.7563, 30.2347, 33.2842 )
+
+[node name="BigTree4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.991823, 0, -0.127619, 0, 1, 0, 0.127619, 0, 0.991823, 94.3292, 34.2829, 33.2842 )
+
+[node name="BigTree5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.960035, 0, -0.279879, 0, 1, 0, 0.279879, 0, 0.960035, 79.5113, 34.2987, -78.7561 )
+
+[node name="BigTree6" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.992986, 0, 0.118231, 0, 1, 0, -0.118231, 0, 0.992986, 39.4596, 37.8342, 84.9257 )
+
+[node name="PineTree" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.143, 33.7424, -48.4579 )
+
+[node name="PineTree2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.920525, 0, -0.390683, 0, 1, 0, 0.390683, 0, 0.920525, -91.3823, 32.35, 69.8747 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )

@@ -12,5 +12,5 @@ func _ready():
 
 
 func _process(delta):
-	if PlayerStats.score >= 25:
-		get_tree().change_scene("res://EndingScreen.tscn")
+	if PlayerStats.score >= 27:
+		get_tree().change_scene("res://canyon.tscn")
