@@ -25,27 +25,30 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = ExtResource( 4 )
-margin_right = 1980.0
+margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.368627, 0.0156863, 0.0156863, 1 )
 
 [node name="CenterContainer2" type="CenterContainer" parent="ColorRect"]
 margin_right = 1980.0
 margin_bottom = 1440.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="nebbermainmenupcicc" type="Sprite" parent="ColorRect/CenterContainer2"]
-position = Vector2( 987.863, 545.515 )
-scale = Vector2( 2.05551, 2.02661 )
+position = Vector2( 960.754, 549.157 )
+scale = Vector2( 2.01808, 2.04493 )
 texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 1980.0
+margin_right = 1920.0
 margin_bottom = 1080.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 475.0
+margin_left = 445.0
 margin_top = 361.0
-margin_right = 1504.0
+margin_right = 1474.0
 margin_bottom = 718.0
 custom_constants/separation = 20
 
