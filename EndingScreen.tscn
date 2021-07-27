@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Timer.gd" type="Script" id=1]
 
 [node name="Ending Screen" type="Control"]
 margin_right = 1977.0
@@ -36,8 +38,8 @@ custom_constants/shadow_offset_x = -1
 custom_constants/line_spacing = 17
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 25
-text = "Created By
--Roman"
+text = "GAME LOCKED FOR 24 HOURS PLAY AGAIN IN 24 HOURS
+TOTAL TIME REMAINING "
 align = 1
 valign = 1
 autowrap = true
@@ -62,13 +64,30 @@ rect_clip_content = true
 custom_colors/font_color = Color( 0, 1, 0.596078, 1 )
 custom_colors/font_outline_modulate = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "You've wasted your time YAY!!!!!!!!!!!!!!"
+text = "Ending 1 OF 429"
 align = 1
 valign = 1
 clip_text = true
 uppercase = true
-percent_visible = -0.027027
 max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Label" parent="ColorRect"]
+anchor_right = 0.11
+anchor_bottom = 0.073
+margin_left = 290.0
+margin_top = 761.0
+margin_right = 1447.54
+margin_bottom = 993.014
+rect_scale = Vector2( 10, 10 )
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Timer"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

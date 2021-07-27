@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://World3.glb" type="PackedScene" id=1]
 [ext_resource path="res://Nebber1Godot.tscn" type="PackedScene" id=2]
@@ -42,6 +42,9 @@ glow_strength = 1.26
 glow_hdr_threshold = 0.0
 glow_hdr_luminance_cap = 20.53
 glow_hdr_scale = 3.33
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 118.098, 227.423 )
 
 [node name="World3" instance=ExtResource( 1 )]
 script = ExtResource( 4 )
@@ -103,22 +106,22 @@ transform = Transform( -0.757891, -0.210071, -0.617634, -0.243025, 0.969507, -0.
 transform = Transform( -0.482005, 0.576685, -0.659625, 0.585075, 0.772251, 0.247621, 0.652195, -0.266576, -0.709633, -6.94421, 0, -22.4428 )
 
 [node name="cracker" parent="." index="18" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.8108, -12.0965, -89.4983 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.8108, -13.5485, -89.4983 )
 
 [node name="cracker2" parent="." index="19" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.0508, -12.0965, 161.888 )
 
 [node name="cracker3" parent="." index="20" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4409, 1.65158, -94.2587 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2935, 0.926046, -49.5439 )
 
 [node name="cracker4" parent="." index="21" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100.599, -11.02, -122.616 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100.599, -13.135, -122.616 )
 
 [node name="cracker5" parent="." index="22" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -151.08, -12.1668, 131.955 )
 
 [node name="cracker6" parent="." index="23" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.26, -11.1812, 190.54 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160.016, -12.955, 180.321 )
 
 [node name="Score" parent="." index="24" instance=ExtResource( 7 )]
 
@@ -133,3 +136,21 @@ transform = Transform( 1.82393, 0, -1.04081, 0, 2.1, 0, 1.04081, 0, 1.82393, -8.
 
 [node name="DeadBigTree3" parent="." index="28" instance=ExtResource( 8 )]
 transform = Transform( 1.82393, 0, -1.04081, 0, 2.1, 0, 1.04081, 0, 1.82393, 29.1465, 0.670382, 67.8566 )
+
+[node name="StaticBody" type="StaticBody" parent="." index="29"]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 194.169, -14.8305, 0 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -181.878, -14.8305, 0 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="StaticBody" index="2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.5716, -14.8305, -198.296 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="StaticBody" index="3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.5716, -14.8305, 198.52 )
+shape = SubResource( 4 )
