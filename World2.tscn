@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/DeadBigTree.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/rock1.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Terrain2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World2.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/rock_2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://fazebearasset.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -17,7 +18,7 @@
 background_mode = 2
 background_sky = SubResource( 1 )
 background_energy = 1.37
-ambient_light_color = Color( 0.780392, 0.686275, 0.0823529, 1 )
+ambient_light_color = Color( 0.866667, 0.74902, 0, 1 )
 ambient_light_energy = 1.71
 fog_color = Color( 1, 1, 1, 1 )
 fog_sun_color = Color( 1, 0.666667, 0, 1 )
@@ -173,3 +174,6 @@ shape = SubResource( 3 )
 [node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -9.61791, 0, 110.257 )
 shape = SubResource( 3 )
+
+[node name="fnaf-2-withered-freddy-fazbear" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.565759, 0, -0.824571, 0, 1, 0, 0.824571, 0, 0.565759, 98.55, -9.53619, 0 )
