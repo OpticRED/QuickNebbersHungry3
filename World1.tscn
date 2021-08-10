@@ -1,14 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://cracker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScoreLayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Nebber1Godot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://secondasset.tscn" type="PackedScene" id=4]
 [ext_resource path="res://meteor1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World1.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/BigTree.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/PineTree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://fazebearasset.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ProceduralSky" id=1]
@@ -19,24 +16,23 @@ background_sky = SubResource( 1 )
 background_energy = 0.0
 ambient_light_color = Color( 0.462745, 0, 0, 1 )
 ambient_light_energy = 0.0
-fog_enabled = true
 fog_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
 fog_sun_color = Color( 0.00784314, 0.00784314, 0.00392157, 1 )
 fog_depth_begin = 311.1
 fog_depth_end = 0.0
 auto_exposure_scale = 0.01
+glow_enabled = true
 glow_levels/1 = true
 glow_levels/2 = true
-glow_levels/3 = false
 glow_levels/4 = true
-glow_levels/5 = false
 glow_levels/6 = true
-glow_intensity = 2.13
-glow_strength = 1.27
-glow_bloom = 0.23
-glow_hdr_threshold = 0.29
-glow_hdr_luminance_cap = 0.0
-glow_hdr_scale = 0.76
+glow_levels/7 = true
+glow_intensity = 2.4
+glow_strength = 1.36
+glow_bloom = 0.52
+glow_hdr_threshold = 0.16
+glow_hdr_luminance_cap = 5.69
+glow_hdr_scale = 0.58
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 5.58484, 50.8188, 174.907 )
@@ -58,8 +54,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.1666, 93.7059 )
 
 [node name="meteor1" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7567, -17.8178 )
-
-[node name="grass11" parent="." instance=ExtResource( 6 )]
 
 [node name="cracker" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.9756, 82.8005 )
@@ -94,30 +88,8 @@ directional_shadow_split_3 = 0.0
 directional_shadow_max_distance = 0.1
 
 [node name="Score" parent="." instance=ExtResource( 2 )]
-
-[node name="BigTree" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.988359, 0, -0.152141, 0, 1, 0, 0.152141, 0, 0.988359, -2.38419e-07, 35.5256, -107.089 )
-
-[node name="BigTree2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.0042935, 0, 0.999991, 0, 1, 0, -0.999991, 0, 0.0042935, -70.5738, 30.9683, -60.2362 )
-
-[node name="BigTree3" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.941582, 0, 0.336783, 0, 1, 0, -0.336783, 0, 0.941582, -94.7563, 30.2347, 33.2842 )
-
-[node name="BigTree4" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.991823, 0, -0.127619, 0, 1, 0, 0.127619, 0, 0.991823, 94.3292, 34.2829, 33.2842 )
-
-[node name="BigTree5" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.960035, 0, -0.279879, 0, 1, 0, 0.279879, 0, 0.960035, 79.5113, 34.2987, -78.7561 )
-
-[node name="BigTree6" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.992986, 0, 0.118231, 0, 1, 0, -0.118231, 0, 0.992986, 39.4596, 37.8342, 84.9257 )
-
-[node name="PineTree" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.143, 33.7424, -48.4579 )
-
-[node name="PineTree2" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.920525, 0, -0.390683, 0, 1, 0, 0.390683, 0, 0.920525, -91.3823, 32.35, 69.8747 )
+scale = Vector2( 0.935, 1 )
+transform = Transform2D( 0.935, 0, 0, 1, 0, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 

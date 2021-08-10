@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://AssetImports/Coraline's Cat.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://nebbermainmenupcicc.png" type="Texture" id=3]
 [ext_resource path="res://UV TExturemap.material" type="Material" id=4]
+[ext_resource path="res://MyFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Title.tres" type="Animation" id=6]
+[ext_resource path="res://TitleJitter.tres" type="Animation" id=7]
+[ext_resource path="res://PicTitle.tres" type="Animation" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 78
@@ -39,10 +43,10 @@ __meta__ = {
 }
 
 [node name="nebbermainmenupcicc" type="Sprite" parent="ColorRect/CenterContainer2"]
-modulate = Color( 0.94902, 0.0470588, 0.0470588, 1 )
-self_modulate = Color( 0.768627, 0.231373, 0.231373, 1 )
-position = Vector2( 960.754, 549.157 )
-scale = Vector2( 2.01808, 2.04493 )
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 955.415, 537.143 )
+scale = Vector2( 1.99588, 2.00044 )
 texture = ExtResource( 3 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -50,46 +54,45 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 162.0
+margin_left = 434.0
 margin_top = 232.0
-margin_right = 1758.0
+margin_right = 1486.0
 margin_bottom = 848.0
 custom_constants/separation = 20
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 1596.0
+margin_right = 1052.0
 margin_bottom = 159.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_right = 1596.0
+margin_right = 1052.0
 margin_bottom = 159.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
-text = "Quick Nebbers Hungry   3"
+text = "The Magical Falls"
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/Label"]
-anchor_left = 0.802
-anchor_top = 2.704
-anchor_right = 1.093
-anchor_bottom = 5.27
-margin_left = 0.00793457
-margin_top = 0.0639648
-margin_right = -0.428101
-margin_bottom = 0.0699463
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 155.0
+margin_top = 20.0
+margin_right = 897.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( -30, 0 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Nebbers Hungry 3"
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 179.0
-margin_right = 1596.0
+margin_right = 1052.0
 margin_bottom = 616.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
-margin_left = 594.0
-margin_right = 1001.0
+margin_left = 322.0
+margin_right = 729.0
 margin_bottom = 437.0
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
@@ -107,7 +110,7 @@ margin_bottom = 143.0
 rect_min_size = Vector2( 49, 0 )
 input_pass_on_modal_close_click = false
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
 text = "Start"
@@ -138,6 +141,15 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Options"
 
+[node name="Options" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/OptionName"]
+anchor_right = 1.0
+anchor_bottom = 0.93
+margin_right = 7.0
+margin_bottom = 0.00999451
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
 margin_top = 294.0
 margin_right = 407.0
@@ -148,19 +160,29 @@ margin_left = 95.0
 margin_right = 312.0
 margin_bottom = 143.0
 
-[node name="OptionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+[node name="Optionname" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
 margin_right = 217.0
 margin_bottom = 143.0
 rect_min_size = Vector2( 49, 0 )
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 0.952941, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Exit"
 
-[node name="Label" type="Label" parent="."]
-margin_top = 533.0
-margin_right = 1920.0
-margin_bottom = 547.0
-text = "YOU CANT CLICK EXIT LOL"
+[node name="Exit" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Optionname"]
+anchor_right = 1.0
+anchor_bottom = 0.93
+margin_right = 5.0
+margin_bottom = 0.00999451
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/PicTitle = ExtResource( 8 )
+anims/Title = ExtResource( 6 )
+anims/TitleJitter = ExtResource( 7 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/OptionName/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/OptionName/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Optionname/Exit" to="." method="_on_Exit_pressed"]

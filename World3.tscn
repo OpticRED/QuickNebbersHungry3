@@ -125,6 +125,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -151.08, -12.1668, 131.955 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160.016, -12.955, 180.321 )
 
 [node name="Score" parent="." index="24" instance=ExtResource( 7 )]
+scale = Vector2( 0.937, 1 )
+transform = Transform2D( 0.937, 0, 0, 1, 0, 0 )
 
 [node name="DeadBigTree" parent="." index="25" instance=ExtResource( 8 )]
 transform = Transform( 2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, 0, 0.899835, 167.153 )

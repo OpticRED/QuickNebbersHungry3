@@ -83,6 +83,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26385, 0.150324, 76.9094 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.752, 0.150324, 43.5697 )
 
 [node name="Score" parent="." index="10" instance=ExtResource( 4 )]
+scale = Vector2( 0.941, 1 )
+transform = Transform2D( 0.941, 0, 0, 1, 0, 0 )
 
 [node name="crackerscheese" parent="." index="11" instance=ExtResource( 6 )]
 transform = Transform( -0.0188495, 2.99994, 0, -2.99994, -0.0188495, 0, 0, 0, 3, 0, 170.46, 0 )
