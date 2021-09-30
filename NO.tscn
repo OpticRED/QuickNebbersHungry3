@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="NO" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 0.175
+anchor_bottom = 0.123
+margin_right = -3.05176e-05
+margin_bottom = 0.160004
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 336.0
+margin_bottom = 133.0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_top = 59.0
+margin_bottom = 73.0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Label"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.1263
+margin_top = -71.9454
+margin_right = 358.474
+margin_bottom = 107.055
+rect_scale = Vector2( 5.551, 4.192 )
+text = "You're Bad."
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

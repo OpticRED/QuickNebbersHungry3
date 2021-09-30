@@ -13,4 +13,4 @@ func _ready():
 
 func _process(delta):
 	if PlayerStats.score >= 31:
-		get_tree().change_scene("res://EndingScreen.tscn")
+		get_tree().change_scene("res://snowworld.tscn")

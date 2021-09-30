@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+metallic = 0.28
+roughness = 0.57
+
+[sub_resource type="QuadMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0, -10.9091 ), 96.2237, 96.2237, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.755814, 0.761364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[node name="Snow" type="Spatial"]
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+transform = Transform( 50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0 )
+amount = 5000
+lifetime = 0.4
+mesh = SubResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 0, -9.517, 0 )
+spread = 75.48
+flatness = 0.44
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+linear_accel_curve = SubResource( 3 )
+scale_amount = 0.0
+scale_amount_random = 0.02
+scale_amount_curve = SubResource( 4 )

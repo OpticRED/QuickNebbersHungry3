@@ -22,6 +22,8 @@ func _input(event):
 		rotate_y(deg2rad(-event.relative.x * mouse_sense))
 		head.rotate_x(deg2rad(-event.relative.y * mouse_sense))
 		head.rotation.x = clamp(head.rotation.x, deg2rad(-89), deg2rad(89))
+		head.rotation_degrees.z = clamp(head.rotation_degrees.z, -89, 89)
+		print(head.rotation_degrees)
 		
 func _process(delta):
 	

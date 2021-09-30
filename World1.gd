@@ -10,8 +10,15 @@ extends Spatial
 func _ready():
 	pass # Replace with function body.
 
+func change_scene():
+	$FadeTransition/AnimationPlayer.play("FadeToBlack")
+	yield($FadeTransition/AnimationPlayer,"animation_finished")
+	get_tree().change_scene("res://World2.tscn")
 
 func _process(delta):
 	if PlayerStats.score >= 6:
-		get_tree().change_scene("res://World2.tscn")
+		set_process(false)
+		change_scene()
+		
+		
 	

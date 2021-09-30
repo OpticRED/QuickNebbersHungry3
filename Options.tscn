@@ -15,25 +15,28 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.042
 anchor_top = 0.035
-anchor_right = 0.101
-anchor_bottom = 0.107
+anchor_right = 1.0
+anchor_bottom = 0.914
 margin_left = -80.64
 margin_top = -37.8
-margin_right = -31.92
-margin_bottom = 0.439995
+margin_right = -15.0
+margin_bottom = 94.8799
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 67.0
-margin_top = 50.0
-margin_right = 94.0
-margin_bottom = 64.0
+margin_left = 939.0
+margin_top = 534.0
+margin_right = 966.0
+margin_bottom = 548.0
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
-margin_right = 27.0
-margin_bottom = 14.0
+margin_left = -1000.0
+margin_top = -800.0
+margin_right = -973.0
+margin_bottom = -786.0
+rect_scale = Vector2( 99.777, 100 )
 rect_clip_content = true
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "EXIT"
@@ -42,13 +45,14 @@ __meta__ = {
 }
 
 [node name="ExitTomenu" type="TextureButton" parent="CenterContainer/HBoxContainer/Label"]
-anchor_top = -0.071
-anchor_right = 1.037
-anchor_bottom = 1.0
-margin_left = -2.0
-margin_top = -0.00599998
-margin_right = 0.000997543
-margin_bottom = -1.0
+anchor_left = -34.314
+anchor_top = -37.96
+anchor_right = 34.723
+anchor_bottom = 35.897
+margin_left = -6.35638
+margin_top = -1.03668
+margin_right = -6.35559
+margin_bottom = -1.03479
 __meta__ = {
 "_edit_use_anchors_": false
 }

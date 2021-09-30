@@ -12,7 +12,7 @@ func _ready():
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene(FIRST_SCENE)
+	$AnimationPlayer.play("FadeToBlack")
 
 
 
@@ -23,3 +23,6 @@ const Options = "res://Options.tscn"
 
 func _on_Options_pressed():
 	get_tree().change_scene(Options)
+
+func level_change_trans():
+	get_tree().change_scene(FIRST_SCENE)
