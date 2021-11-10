@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Human Eating_Crunch - Sound Effect (HD).mp3-74210f4058187e0d3739c358f854ee04.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Human Eating_Crunch - Sound Effect (HD).mp3"
+dest_files=[ "res://.import/Human Eating_Crunch - Sound Effect (HD).mp3-74210f4058187e0d3739c358f854ee04.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://cracker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ScoreLayer.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://FadeTransition.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World1.gd" type="Script" id=7]
 [ext_resource path="res://NO.tscn" type="PackedScene" id=8]
-[ext_resource path="res://fazebearasset.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -91,9 +90,6 @@ shape = SubResource( 3 )
 [node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.1163, 18.8392, -114.494 )
 shape = SubResource( 3 )
-
-[node name="fnaf-2-withered-freddy-fazbear" parent="." instance=ExtResource( 10 )]
-transform = Transform( 8.2639, -2.76586, -4.9049, 0.844814, 9.22095, -3.7763, 5.56725, 2.70632, 7.85376, 87.2593, 28.7856, -93.0794 )
 
 [node name="FadeTransition" parent="." instance=ExtResource( 6 )]
 

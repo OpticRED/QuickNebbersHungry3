@@ -19,6 +19,7 @@ func _ready():
 func _on_Area_body_entered(body):
 	if body.name == "Player":
 		print("yum")
+		AudioPlayer.play_sound_effect("eat")
 		PlayerStats.add_score(1)
 		queue_free()# Replace with function body.
 

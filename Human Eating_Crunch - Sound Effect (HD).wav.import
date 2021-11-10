@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Human Eating_Crunch - Sound Effect (HD).wav-eb7481a2273d000958f32bb0d0ace013.sample"
+
+[deps]
+
+source_file="res://Human Eating_Crunch - Sound Effect (HD).wav"
+dest_files=[ "res://.import/Human Eating_Crunch - Sound Effect (HD).wav-eb7481a2273d000958f32bb0d0ace013.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
